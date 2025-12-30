@@ -24,7 +24,8 @@ from ( select user_name,
        group by 1, 2
        order by 1, 3 desc ) as ranked
 where rank <= 3;
--- my solution was pretty close to aaron's, but I didn't know that I could order by count(*) inside row number partition
+-- my solution was pretty close to aaron's,
+-- but I didn't know that I could order by count(*) inside row number partition
 
 -- aaron's solution with cte, more readable
 with ranked as
